@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use CraNeXt, please cite it as below."
 title: "CraNeXt: Automatic Reconstruction of Skull Implants With Skull Categorization Technique"
 ---
-
+"""
 @article{CraNeXt,
   author={Kesornsri, Thathapatt and Asawalertsak, Napasara and Tantisereepatana, Natdanai and Manowongpichate, Pornnapas and Lohwongwatana, Boonrat and Puncreobutr, Chedtha and Achakulvisut, Titipat and Vateekul, Peerapon},
   journal={IEEE Access}, 
@@ -14,3 +14,4 @@ title: "CraNeXt: Automatic Reconstruction of Skull Implants With Skull Categoriz
   doi={10.1109/ACCESS.2024.3415173},
   url={https://doi.org/10.1109/access.2024.3415173}
 }
+"""
