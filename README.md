@@ -13,7 +13,7 @@
 # Requirements
 Use `pip` to install the requirements as follows:
 ```
-!pip install torch numpy nibabel monai scikit-image medpy
+!pip install -f requirements.txt
 ```
 
 
