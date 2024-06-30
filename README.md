@@ -13,7 +13,7 @@
 # Requirements
 Use `pip` to install the requirements as follows:
 ```
-!pip install -f requirements.txt
+!pip install -r requirements.txt
 ```
 
 
