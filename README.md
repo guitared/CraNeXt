@@ -2,6 +2,8 @@
 
 **CraNeXt** is a deep learning model for skull reconstruction tasks. The input is a binary voxel is a defective skull, and the output is a binary voxel representing a complete skull.
 
+<a href="https://colab.research.google.com/github/guitared/CraNeXt/blob/main/example.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 <center>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/architecture-dark.png">
@@ -13,7 +15,7 @@
 # Requirements
 Use `pip` to install the requirements as follows:
 ```
-!pip install -f requirements.txt
+!pip install -r requirements.txt
 ```
 
 

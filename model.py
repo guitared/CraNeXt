@@ -171,6 +171,34 @@ class CraNeXt(nn.Module):
         self.final_convolution = nn.Conv3d(dims[-1], num_classes, 1, bias=False)
         self.activation = nn.Sigmoid()
 
+    def forward(self, x):
+        x = self.init_stage(x)
+        shapes = [x.shape]
+        steps = [x]
+        assert len(self.upsample_layers) == len(self.concat)
+        assert len(self.upsample_layers) == len(self.up_stages)
+        assert len(self.upsample_layers) == len(self.up_norms)
+        for i, (down, stage, norm) in enumerate(zip(self.downsample_layers, self.down_stages, self.down_norms)):
+            if i != 0:
+                steps.append(x)
+            x = down(x)
+            x = norm(x)
+            x = stage(x)
+            shapes.append(x.shape)
+        shapes.reverse()
+        for i, (up, cat, stage, norm) in enumerate(zip(self.upsample_layers, self.concat, self.up_stages, self.up_norms)):
+            x = up(x, shapes[i + 1])
+            y = steps.pop(-1)
+            x = cat(x, y)
+            x = stage(x)
+            x = norm(x)
+        x = self.upscale_out(x, shapes[-1])
+        y = steps.pop(-1)
+        x = self.final_concat(x, y)
+        x = self.final_convolution(x)
+        x = self.activation(x)
+        return x
+
 
 class CraNeXt_tiny(CraNeXt):
     def __init__(self):
