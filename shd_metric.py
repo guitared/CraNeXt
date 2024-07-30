@@ -2,7 +2,7 @@ import numpy as np
 from medpy.metric.binary import hd
 
 
-def _extract_implant_surface(data):
+def extract_implant_surface(data):
     data = np.asarray(data)
     depth, height, width = data.shape
     out = np.zeros_like(data)
@@ -55,7 +55,7 @@ def _extract_implant_surface(data):
 
 
 def shd(pred, gt, voxelspacing=None):
-    surface_pred = _extract_implant_surface(pred.astype(np.uint8))
-    surface_gt = _extract_implant_surface(gt.astype(np.uint8))
+    surface_pred = extract_implant_surface(pred.astype(np.uint8))
+    surface_gt = extract_implant_surface(gt.astype(np.uint8))
 
     return hd(surface_pred, surface_gt, voxelspacing=voxelspacing)
