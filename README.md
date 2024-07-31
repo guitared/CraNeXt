@@ -2,7 +2,18 @@
 
 **CraNeXt** is a deep learning model for skull reconstruction tasks. The input is a binary voxel is a defective skull, and the output is a binary voxel representing a complete skull.
 
+# Usage Example
+
 <a href="https://colab.research.google.com/github/guitared/CraNeXt/blob/main/example.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+For a detailed demonstration of how to use CraNeXt, please refer to our `example.ipynb` notebook. This notebook provides step-by-step instructions and code examples for:
+
+- Downloading sample SkullBreak dataset and preparing input data
+- Using the CraNeXt model with pretrained weights on SkullBreak
+- Running skull reconstruction and performing evaluation
+- Visualizing reconstruction result
+
+You can run the notebook directly in Google Colab by clicking the Colab badge above or locally.
 
 <center>
 <picture>
@@ -20,7 +31,9 @@ Use `pip` to install the requirements as follows:
 
 
 # Citation
-If you use the model, you can cite it with the following bibtex.
+
+Please refer to our full manuscript in [IEEE Access](https://ieeexplore.ieee.org/document/10559595). If you use the model, you can cite it with the following bibtex.
+
 ```
 @article {CraNeXt,
   author    = { Kesornsri, Thathapatt and Asawalertsak, Napasara and Tantisereepatana, Natdanai and Manowongpichate, Pornnapas and Lohwongwatana, Boonrat and Puncreobutr, Chedtha and Achakulvisut, Titipat and Vateekul, Peerapon },
