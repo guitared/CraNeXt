@@ -2,6 +2,13 @@
 
 **CraNeXt** is a deep learning model for skull reconstruction tasks. The input is a binary voxel is a defective skull, and the output is a binary voxel representing a complete skull.
 
+<center>
+<picture>
+  <img alt="CraNeXt architecture" src="assets/cranext_pipeline.png" width=300>
+</picture>
+</center>
+
+
 # Usage Example
 
 <a href="https://colab.research.google.com/github/guitared/CraNeXt/blob/main/example.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
